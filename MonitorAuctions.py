@@ -8,7 +8,10 @@ context = zmq.Context()
 class MonitorAuctions:
 
     @staticmethod
-    def initialize_subscriber():
+    def update_ui(message):
+        print(message)
+
+    def initialize_subscriber(self):
         subscriber = context.socket(zmq.SUB)
         subscriber.connect('tcp://127.0.0.1:1000')
         subscriber.connect('tcp://127.0.0.1:1001')
@@ -21,7 +24,14 @@ class MonitorAuctions:
         subscriber.connect('tcp://127.0.0.1:2000')
         subscriber.connect('tcp://127.0.0.1:2001')
         subscriber.connect('tcp://127.0.0.1:2010')
-        subscriber.setsockopt(zmq.SUBSCRIBE, '')
+        subscriber.setsockopt(zmq.SUBSCRIBE, str.encode(''))
+        print('Subscribed to all commands & events...')
+
+        while True:
+            msg = subscriber.recv()
+            m = msg.decode(encoding='UTF-8')
+            print(m + ' received...')
+            self.update_ui(m)
 
 if __name__ == '__main__':
     monitor = MonitorAuctions()
