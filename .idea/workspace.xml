@@ -15,7 +15,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MonitorAuctions$MonitorAuctions.coverage" NAME="MonitorAuctions Coverage Results" MODIFIED="1423404862004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MonitorAuctions$MonitorAuctions.coverage" NAME="MonitorAuctions Coverage Results" MODIFIED="1423407104329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -32,8 +32,8 @@
       <file leaf-file-name="MonitorAuctions.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MonitorAuctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6422764" vertical-offset="58" max-vertical-offset="986">
-              <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.24186991" vertical-offset="0" max-vertical-offset="986">
+              <caret line="7" column="77" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="77" />
               <folding>
                 <element signature="e#22#51#0" expanded="true" />
               </folding>
@@ -323,7 +323,11 @@
       <created>1423405100596</created>
       <updated>1423405100596</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implemented UpdateUI and added parseMessage function.">
+      <created>1423405646716</created>
+      <updated>1423405646716</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -370,7 +374,8 @@
     <MESSAGE value="Added subscription to all addresses" />
     <MESSAGE value="Added loop to listen for commands and events. Created function header for updating Firebase" />
     <MESSAGE value="Added library for Firebase integration. Initialized Firebase object." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added library for Firebase integration. Initialized Firebase object." />
+    <MESSAGE value="Implemented UpdateUI and added parseMessage function." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented UpdateUI and added parseMessage function." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -378,8 +383,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MonitorAuctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6422764" vertical-offset="58" max-vertical-offset="986">
-          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.24186991" vertical-offset="0" max-vertical-offset="986">
+          <caret line="7" column="77" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="77" />
           <folding>
             <element signature="e#22#51#0" expanded="true" />
           </folding>

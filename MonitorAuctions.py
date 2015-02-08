@@ -46,7 +46,7 @@ class MonitorAuctions:
             msg = subscriber.recv()
             m = msg.decode(encoding='UTF-8')
             print(m + ' received...')
-            self.update_ui(self, m)
+            self.update_ui(m)
 
 if __name__ == '__main__':
     monitor = MonitorAuctions()
