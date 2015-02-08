@@ -1,5 +1,9 @@
 __author__ = 'Conor'
 
+# The official documentation was consulted for all three 3rd party libraries used
+# ZeroMQ -> https://learning-0mq-with-pyzmq.readthedocs.org/en/latest/pyzmq/patterns/pubsub.html
+# Firebase -> https://pypi.python.org/pypi/python-firebase/1.2
+
 from firebase import firebase
 import zmq
 
@@ -20,8 +24,8 @@ class MonitorAuctions:
     def update_ui(self, message):
         auction_id = self.parse_message(message, '<id>', '</id>')
         try:
-            my_firebase.put('/logs/' + auction_id, 'log', message)
-            print('Update: ' + message)
+            update = my_firebase.post('/logs/' + auction_id, {'log': message})
+            print('Logged: ' + update)
         except Exception:
             print('Could not perform update...')
             pass
