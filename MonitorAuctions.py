@@ -24,10 +24,9 @@ class MonitorAuctions:
     def update_ui(self, message):
         auction_id = self.parse_message(message, '<id>', '</id>')
         try:
-            update = my_firebase.post('/logs/' + auction_id, {'log': message})
-            print('Logged: ' + update)
+            my_firebase.post('/auctions/' + auction_id + '/logs', {'log': message})
+            print('Log updated...')
         except Exception:
-            print('Could not perform update...')
             pass
 
     def initialize_subscriber(self):
