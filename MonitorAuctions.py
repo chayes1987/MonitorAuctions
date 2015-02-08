@@ -1,8 +1,11 @@
 __author__ = 'Conor'
 
+from firebase import firebase
 import zmq
 
 context = zmq.Context()
+FIREBASE_URL = 'https://auctionapp.firebaseio.com'
+my_firebase = firebase.FirebaseApplication(FIREBASE_URL, authentication=None)
 
 
 class MonitorAuctions:
