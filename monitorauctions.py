@@ -49,4 +49,4 @@ class MonitorAuctions:
                 self.update_ui(m)
             except (KeyboardInterrupt, SystemExit):
                 print('Application Stopped...')
-                pass
+                raise SystemExit
