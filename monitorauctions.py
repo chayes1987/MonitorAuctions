@@ -42,7 +42,11 @@ class MonitorAuctions:
         print('SUB: All commands & events...')
 
         while True:
-            msg = subscriber.recv()
-            m = msg.decode()
-            print('REC: ' + m)
-            self.update_ui(m)
+            try:
+                msg = subscriber.recv()
+                m = msg.decode()
+                print('REC: ' + m)
+                self.update_ui(m)
+            except (KeyboardInterrupt, SystemExit):
+                print('Application Stopped...')
+                pass
