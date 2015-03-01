@@ -1,6 +1,7 @@
 __author__ = 'Conor'
 
 # Firebase -> https://pypi.python.org/pypi/python-firebase/1.2
+# Config file -> https://docs.python.org/2/library/configparser.html
 
 from monitorauctions import MonitorAuctions
 from configparser import ConfigParser, Error
