@@ -45,6 +45,8 @@ class MonitorAuctions:
             try:
                 msg = subscriber.recv()
                 m = msg.decode()
+                if m.startswith('Ok '):
+                    continue
                 print('REC: ' + m)
                 self.update_ui(m)
             except (KeyboardInterrupt, SystemExit):
