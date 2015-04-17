@@ -1,7 +1,6 @@
 __author__ = 'Conor'
 
-# The official documentation was consulted for all three 3rd party libraries used
-# ZeroMQ -> https://learning-0mq-with-pyzmq.readthedocs.org/en/latest/pyzmq/patterns/pubsub.html
+# 0mq -> https://learning-0mq-with-pyzmq.readthedocs.org/en/latest/pyzmq/patterns/pubsub.html
 
 from datetime import datetime
 import zmq
@@ -23,7 +22,7 @@ class MonitorAuctions:
         end_index = substring.index(end_tag)
         return substring[:end_index]
 
-    def update_ui(self, message):
+    def update_dashboard(self, message):
         auction_id = self.parse_message(message, '<id>', '</id>')
         data = {'_id': auction_id, 'log': message, 'log_date': datetime.now()}
         try:
@@ -48,7 +47,7 @@ class MonitorAuctions:
                 if m.startswith('Ok '):
                     continue
                 print('REC: ' + m)
-                self.update_ui(m)
+                self.update_dashboard(m)
             except (KeyboardInterrupt, SystemExit):
                 print('Application Stopped...')
                 raise SystemExit
