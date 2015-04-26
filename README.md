@@ -1,8 +1,10 @@
 # MonitorAuctions
+
 This is the monitor auctions service for my FYP. It is written in Python. It uses a 0mq binding. It is responsible for
 monitoring all auctions and recording the data in Firebase for display in the web interface.
 
 ## Project Setup
+
 Requires firebase integration.
 
 ## License
@@ -17,6 +19,7 @@ None
 - Connected to server instance using PuTTy using ec2-user@PublicDNS and .ppk keyfile for SSH Auth
 
 ## Application Setup Required
+
 - Installed gcc -> sudo yum install gcc-c++
 - Installed python-dev -> sudo yum install python-devel
 - Installed zmq binding - sudo easy_install pyzmq
